@@ -1,0 +1,28 @@
+
+<h1 class="text-center">医療法人　孝友会　患者申し送り一覧</h1>
+<%= link_to "[デイケア]" ,'/daycare' %>       <%= link_to "[老健]"  ,'/healthcarefacility' %>       <%= link_to "[病棟]" ,'/ward' %>       <%= link_to "[外来]" ,'outpatient'  %> 
+<table class="table table-bordered table-striped mt-4">
+  <thead class="table-primary">
+    <tr>
+      <th scope="col">投稿時間</th>
+      <th scope="col">投稿者</th>
+      <th scope="col>">投稿内容</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @posts.each.with_index(1) do |post, i| %>
+      <tr>
+        <th><%= post.created_at %></th>
+        <td><%= post.category %></td>
+        <td><%= post.content %></td>
+        <td>
+          <%= link_to "詳細", post ,class: "btn btn-success"%>
+          <%= link_to "編集", edit_post_path(post) ,class: "btn btn-primary"%>
+          <%= link_to "削除", post, method: :delete, data: { confirm: "削除しますか?" } ,class: "btn btn-danger"%>
+          
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
