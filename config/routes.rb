@@ -26,4 +26,7 @@ Rails.application.routes.draw do
   get 'ward' => 'posts#ward'
   get 'outpatient' => 'posts#outpatient'
 
+  resources :posts do
+    resource :favorites, only: [ :create, :destroy]
+  end
 end

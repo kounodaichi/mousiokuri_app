@@ -3,7 +3,6 @@ class PostsController < ApplicationController
   def index
     @posts = current_user.posts.all
     @post = current_user.posts.new   
-    
   end
 
   def show

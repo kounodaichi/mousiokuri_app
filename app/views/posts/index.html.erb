@@ -8,6 +8,7 @@
       <th scope="col">投稿者</th>
       <th scope="col>">投稿内容</th>
       <th scope="col"></th>
+      <th scope="col>">👍</th>
     </tr>
   </thead>
   <tbody>
@@ -20,7 +21,15 @@
           <%= link_to "詳細", post ,class: "btn btn-success"%>
           <%= link_to "編集", edit_post_path(post) ,class: "btn btn-primary"%>
           <%= link_to "削除", post, method: :delete, data: { confirm: "削除しますか?" } ,class: "btn btn-danger"%>
-          
+        </td>
+        <td>
+          <p id="post-<%= post.id %>">
+            <% if post.favorited_by?(current_user) %>
+              <%= render "favorite", post: post %>
+            <% else %>
+              <%= render "unfavorite", post: post %>
+            <% end %>
+          </p>
         </td>
       </tr>
     <% end %>
