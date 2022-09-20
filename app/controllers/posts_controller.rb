@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
+  PER_PAGE = 10
   before_action :authenticate_user!, only: [:show, :create]
   def index
-    @posts = current_user.posts.all
+    @q = Post.ransack(params[:q])
+    @posts = @q.result.page(params[:page]).per(PER_PAGE)
     @post = current_user.posts.new   
   end
 
