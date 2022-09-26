@@ -1,10 +1,11 @@
 class PostsController < ApplicationController
   PER_PAGE = 10
   before_action :authenticate_user!, only: [:show, :create]
+  
   def index
     @q = Post.ransack(params[:q])
-    @posts = @q.result
-    @posts = current_user.posts.page(params[:page]).per(PER_PAGE)
+    @posts = @q.result(distinct: true)
+    @posts = current_user.posts.page(params[:page]).per(PER_PAGE) 
     @post = current_user.posts.new   
   end
 
@@ -60,9 +61,17 @@ class PostsController < ApplicationController
     @outpatient = Post.where(category:"outpatient")
   end
 
-  private
 
+  #  def search
+  #    @posts = @q.result
+  #  end
+
+
+  private
+  # def set_q
+  #   @q = Post.ransack(params[:q])
+  # end
   def post_params
-    params.require(:post).permit(:title, :content, :start_time, :category)
+   params.require(:post).permit(:title, :content, :start_time, :category)
   end
 end

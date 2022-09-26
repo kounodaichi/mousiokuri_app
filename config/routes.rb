@@ -3,20 +3,12 @@ Rails.application.routes.draw do
   get 'users/show'
   devise_for :users
   resources :users, only: [:index, :show]
-  # resources :posts, only: [:index, :show, :create]
-
+  
   resources :posts do  
     resources :comments, only: [:create]  
   end
-  get 'posts/index'
-  get 'posts/show'
-  get 'posts/new'
-  get 'posts/create'
-  get 'posts/edit'
-  get 'posts/update'
-  get 'posts/destroy'
   
-  resources :posts
+  
 
   root to: 'posts#index'
   resources :blogs
@@ -28,9 +20,10 @@ Rails.application.routes.draw do
 
   resources :posts do
     resource :favorites, only: [ :create, :destroy]
+    collection do
+      get 'search'
+    end
+    resources :comments, only: [:create]  
   end
 
-  Rails.application.routes.draw do
-    resources :posts, only: :index
-  end
 end
