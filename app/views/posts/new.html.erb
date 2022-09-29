@@ -4,16 +4,11 @@
 <% end %>
 
 <%= form_with model: @post, local: true do |form| %>
-  <div>
-    <%= form.select :category, [["daycare"], ["healthcarefacility"], ["ward"],["outpatient"]], include_blank: "部署名" %> 
-  </div>
-  <div>
-    <%= form.label :content, "内容" %>
-    <%= form.text_area :content %>
-  </div>
-  
-    <%= form.submit "送信" %>
-  </div>
+  <p><%= form.select :category, [["daycare"], ["healthcarefacility"], ["ward"],["outpatient"]], include_blank: "部署名" %></p>
+  <p><%= form.label :content, "内容" %></p>
+  <p><%= form.text_area :content %></p>
+  <p><%= form.file_field :image %></p>
+  <p><%= form.submit "送信" %></p>
 <% end %>
 
 

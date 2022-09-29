@@ -8,4 +8,5 @@ class Post < ApplicationRecord
   def favorited_by?(current_user)
     favorites.where(user_id: user.id).exists?
   end
+  mount_uploader :image, ImageUploader
 end
