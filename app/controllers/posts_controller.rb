@@ -1,11 +1,10 @@
 class PostsController < ApplicationController
   PER_PAGE = 10
   before_action :authenticate_user!, only: [:show, :create]
-  
+  before_action :set_post, only: %i[show edit update destroy]
   def index
     @q = Post.ransack(params[:q])
-
-    @posts = @q.result{current_user.posts.page(params[:page]).per(PER_PAGE)}
+    @posts = @q.result.includes(:user).page(params[:page])
     @post = current_user.posts.new   
   end
 
@@ -20,7 +19,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create!(post_params)
+    post = Post.create!(post_params)
     @post = current_user.posts.new(post_params)
     if @post.save
       redirect_back(fallback_location: root_path)
@@ -69,9 +68,10 @@ class PostsController < ApplicationController
 
 
   private
-  # def set_q
-  #   @q = Post.ransack(params[:q])
-  # end
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
   def post_params
    params.require(:post).permit(:title, :content, :start_time, :category, :image)
   end
