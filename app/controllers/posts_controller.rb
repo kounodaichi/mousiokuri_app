@@ -20,13 +20,12 @@ class PostsController < ApplicationController
 
   def create
     post = Post.create!(post_params)
-    
-    @post = current_user.posts.new(post_params)
-    if @post.save
-      redirect_back(fallback_location: root_path)
-    else
-      redirect_back(fallback_location: root_path)
-    end
+    # @post = current_user.posts.new(post_params)
+    # if @post.save
+    #   redirect_back(fallback_location: posts_path)
+    # else
+    #   redirect_back(fallback_location: posts_path)
+    # end
   end
 
   def edit
