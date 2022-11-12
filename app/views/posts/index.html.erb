@@ -1,6 +1,7 @@
-
-<h1 class="text-center">医療法人　孝友会　患者申し送り一覧</h1>
-<%= link_to "[デイケア]" ,'/daycare' %>       <%= link_to "[老健]"  ,'/healthcarefacility' %>       <%= link_to "[病棟]" ,'/ward' %>       <%= link_to "[外来]" ,'outpatient'  %> 
+<body id="sheet">
+<br>
+<br>
+<br>
 <%= search_form_for @q do |f| %>
   <%= f.text_field :content_cont, class: "search-form", placeholder: "キーワード検索" %>
   <%= f.submit "検索", class: "search-btn" %>

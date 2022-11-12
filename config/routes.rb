@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   root to: 'posts#index'
   resources :blogs
-
+  get 'begin' => 'posts#begin'
   get 'daycare' => 'posts#daycare'
   get 'healthcarefacility' => 'posts#healthcarefacility'
   get 'ward' => 'posts#ward'
