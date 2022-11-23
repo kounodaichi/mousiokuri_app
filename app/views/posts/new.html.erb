@@ -9,6 +9,8 @@
 <h5 style="text-align:center">
   <%= form_with model: @post, local: true do |form| %>
     <p><%= form.select :category, [["daycare"], ["healthcarefacility"], ["ward"],["outpatient"]], include_blank: "部署名" %></p>
+    <p><%=form.label :title, "タイトル"%></p>
+    <p><%=form.text_field :title %></p>
     <p><%= form.label :content, "内容" %></p>
     <p><%= form.text_area :content %></p>
     <p><%= form.file_field :image, accept: "image/png,image/jpeg,image/gif" %></p>

@@ -3,16 +3,14 @@
 <br>
 <br>
 <h1>投稿詳細</h1>
-<p>タイトル <%= @post.title %></p>
-<p>内容 <%= @post.content %></p>
+<p>日時:<%= @post.start_time&.strftime("%y-%m-%d") %></p>
+<p>タイトル: <%= @post.title %></p>
+<p>内容:<%= @post.content %></p>
 <% if @post.image? %>
   <p><%= image_tag @post.image.url %></p>
 <% end %>
-<div class="time">
-  <p>日時<%= @post.start_time&.strftime("%y-%m-%d") %></p>
-</div>
 
-<h1>コメントをする</h1>
+<h4>コメントをする</h4>
 <%=form_with(model:[@post, @comment], method: :post) do |f| %>
   <div>
     <%= f.text_area :comment_content %>
@@ -21,7 +19,7 @@
   </div>
 <% end %>
 
-<h1> コメント一覧 </h1>
+<h4> コメント一覧 </h4>
 <%= @comments.each do |comment| %>
   <div>
   <%= comment.comment_content %>  
