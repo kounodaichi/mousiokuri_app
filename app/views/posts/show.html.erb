@@ -3,7 +3,7 @@
 <br>
 <br>
 <h1>投稿詳細</h1>
-<p>日時:<%= @post.start_time&.strftime("%y-%m-%d") %></p>
+<p>日時:<%= @post.created_at.strftime("%Y-%m-%d %H:%M") %></p>
 <p>タイトル: <%= @post.title %></p>
 <p>内容:<%= @post.content %></p>
 <% if @post.image? %>
