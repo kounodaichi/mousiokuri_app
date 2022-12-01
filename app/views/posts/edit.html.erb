@@ -1,14 +1,19 @@
+<body id="sheet"><br>
 <h1>編集</h1>
-<%= form_with model: @post, local: true do |form| %>
-  <div>
-    <%= form.label :title, "タイトル" %>
-    <%= form.text_field :title %>
-  </div>
-  <div>
-    <%= form.label :content, "内容" %>
-    <%= form.text_field :content %>
-  </div>
-  <div>
-    <%= form.submit "送信" %>
-  </div>
-<% end %>
+<br>
+<br>
+<br>
+<h2 style="text-align:center">投稿内容の変更</h2>
+<%= render "layouts/error_messages" %>
+<br>
+<br>
+<h5 style="text-align:center">
+  <%= form_with model: @post, local: true do |form| %>
+    <p><%= form.select :category, [["daycare"], ["healthcarefacility"], ["ward"],["outpatient"]], include_blank: "部署名" %></p>
+    <p><%=form.label :title, "タイトル"%></p>
+    <p><%=form.text_field :title %></p>
+    <p><%= form.label :content, "内容" %></p>
+    <p><%= form.text_area :content %></p>
+    <p><%= form.file_field :image, accept: "image/png,image/jpeg,image/gif" %></p>
+    <p><%= form.submit "送信" %></p>
+  <% end %>
