@@ -1,6 +1,13 @@
 ---
 ja:
   activerecord:
+    models:
+      post: メッセージ
+    attributes:
+      post:
+        title: タイトル
+        content: 内容
+        category: 部署名
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
