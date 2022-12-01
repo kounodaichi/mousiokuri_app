@@ -19,8 +19,13 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = Post.create!(post_params)
-    redirect_to posts_path
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to post, notice: "投稿しました"
+    else
+      flash.now[:alert] = "投稿に失敗しました"
+      render :new
+    end
 
     # @post = current_user.posts.new(post_params)
     # if @post.save
@@ -35,9 +40,12 @@ class PostsController < ApplicationController
   end
 
   def update
-    post = Post.find(params[:id])
-    post.update!(post_params)
-    redirect_to post
+    if @post.update(post_params)
+      redirect_to post, notice: "更新しました"
+    else
+      flash.now[:alert] = "更新に失敗しました"
+      render :edit
+    end
   end
 
   def destroy
