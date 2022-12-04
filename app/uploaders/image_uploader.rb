@@ -10,7 +10,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   def size_range
-    0..5.megabytes
+     500.megabytes
   end
   # belongs_to :post, optional: true
   # storage :fog
@@ -30,7 +30,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
    include CarrierWave::MiniMagick
 
-   process resize_to_limit: [200, 300]
+   process resize_to_limit: [600, 700]
   # Process files as they are uploaded:
   # process scale: [200, 300]
   #

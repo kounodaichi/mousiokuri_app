@@ -56,19 +56,19 @@ class PostsController < ApplicationController
 
 
   def daycare
-    @daycare = Post.where(category:"daycare")
+    @daycare = Post.where(category:"デイケア")
   end
 
-  def  healthcarefacility 
-    @healthcarefacility = Post.where(category:"healthcarefacility")
+  def healthcarefacility 
+    @healthcarefacility = Post.where(category:"老健")
   end
 
   def ward
-    @ward = Post.where(category:"ward")
+    @ward = Post.where(category:"病棟")
   end
 
   def outpatient
-    @outpatient = Post.where(category:"outpatient")
+    @outpatient = Post.where(category:"外来")
   end
 
 

@@ -2,27 +2,29 @@
 <br>
 <br>
 <br>
-<h1>投稿詳細</h1>
-<p>日時:<%= @post.created_at.strftime("%Y-%m-%d %H:%M") %></p>
-<p>タイトル: <%= @post.title %></p>
-<p>内容:<%= @post.content %></p>
+<div style="text-align:center">
+  <h1 class="show">投稿詳細</h1>
+</div>
+<h3 class="show2"><%= @post.created_at.strftime("%Y-%m-%d %H:%M") %></h3>
+<h3 class="show3"><%= @post.title %></h3>
+<h3>内容:<%= @post.content %></h3>
 <% if @post.image? %>
   <p><%= image_tag @post.image.url %></p>
 <% end %>
 
-<h4>コメントをする</h4>
+<h2>コメントをする</h2>
 <%=form_with(model:[@post, @comment], method: :post) do |f| %>
-  <div>
+  <h3>
     <%= f.text_area :comment_content %>
     <%= f.hidden_field :post_id, value: @post.id %>
-    <%= f.submit "コメントする" %>
-  </div>
+    <%= f.submit "送信" %>
+  </h3>
 <% end %>
 
-<h4> コメント一覧 </h4>
+<h2> コメント一覧 </h2>
 <%= @comments.each do |comment| %>
-  <div>
+  <h3>
   <%= comment.comment_content %>  
-  </div>
+  </h3>
 <% end %>
 

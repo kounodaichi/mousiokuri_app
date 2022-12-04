@@ -2,13 +2,15 @@
 <br>
 <br>
 <br>
-<h2 style="text-align:center">新規投稿入力フォーム</h2>
+<h2 style="text-align:center">
+  <div class="list2">新規投稿入力フォーム</div>
+</h2>
 <%= render "layouts/error_messages" %>
 <br>
 <br>
 <h5 style="text-align:center">
   <%= form_with model: @post, local: true do |form| %>
-    <p><%= form.select :category, [["daycare"], ["healthcarefacility"], ["ward"],["outpatient"]], include_blank: "部署名" %></p>
+    <p><%= form.select :category, [["デイケア"], ["老健"], ["病棟"],["病棟"]], include_blank: "部署名" %></p>
     <p><%=form.label :title, "タイトル"%></p>
     <p><%=form.text_field :title %></p>
     <p><%= form.label :content, "内容" %></p>
