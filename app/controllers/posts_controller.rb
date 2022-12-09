@@ -5,7 +5,6 @@ class PostsController < ApplicationController
   def index
     @q = Post.ransack(params[:q])
     @posts = @q.result.includes(:user).page(params[:page]).order(created_at: :desc)
-    @post = current_user.posts.new
   end
 
   def show
