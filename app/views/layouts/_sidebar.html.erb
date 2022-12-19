@@ -2,7 +2,7 @@
   <div class="header-name">
     <h2 style="text-align:center">◯◯病院　利用者申し送り</h2>
   </div>
-<h6 style="text-align:center">
+<h6 style="text-align:right">
   <% if user_signed_in? %>
     <%= link_to "アカウント編集", edit_user_registration_path %>
     <%= link_to "ログアウト", destroy_user_session_path, method: :delete , data: { confirm: "ログアウトしますか？" } %>
@@ -10,7 +10,6 @@
   <% else %>
     <%= link_to "新規登録", new_user_registration_path %>
     <%= link_to "ログイン", new_user_session_path %>
-    <%= link_to "ゲストログイン（閲覧用）", users_guest_sign_in_path, method: :post %>
   <% end %>
 </h6>
 <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">

@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   PER_PAGE = 10
   before_action :authenticate_user!, only: [:show, :create]
-  before_action :set_post, only: %i[show edit update destroy]
+  before_action :set_post, only: %i[edit update destroy]
   def index
     @q = Post.ransack(params[:q])
     @posts = @q.result.includes(:user).page(params[:page]).order(created_at: :desc)
@@ -40,7 +40,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    if @post.update(post_params)
+    if @post.update!(post_params)
       redirect_to posts_path, notice: "更新しました"
     else
       flash.now[:alert] = "更新に失敗しました"
@@ -49,8 +49,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    post = Post.find(params[:id])
-    post.destroy!
+    @post.destroy!
     redirect_to root_path
   end
 
@@ -75,10 +74,11 @@ class PostsController < ApplicationController
 
   private
   def set_post
+    @post = current_user.posts.find(params[:id])
     @post = Post.find(params[:id])
   end
 
   def post_params
-   params.require(:post).permit(:title, :content, :start_time, :category, :image)
+    params.require(:post).permit(:title, :content, :start_time, :category, :image)
   end
 end
