@@ -17,9 +17,13 @@
         <%= render'layouts/sidebar' %>
       </div>
     </header>
-    <div class="base-container <%= max_width %>">
-    
-      <%= yield %>
-    </div>
+     <%= render "layouts/flash" %>
+    <main>
+      <br>
+      <%= render "layouts/flash" %>
+      <div class="base-container <%= max_width %>">
+        <%= yield %>
+      </div>
+    </main>
   </body>
 </html>
