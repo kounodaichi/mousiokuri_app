@@ -4,12 +4,6 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, only: [:index, :show]
   
-  resources :posts do  
-    resources :comments, only: [:create]  
-  end
-  
-
-  root to: 'posts#index'
   resources :blogs
   get 'begin' => 'posts#begin'
   get 'daycare' => 'posts#daycare'
@@ -17,6 +11,7 @@ Rails.application.routes.draw do
   get 'ward' => 'posts#ward'
   get 'outpatient' => 'posts#outpatient'
 
+  root to: 'posts#index'
   resources :posts do
     resource :favorites, only: [ :create, :destroy]
     resources :posts, only: [:index]
