@@ -18,14 +18,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    
-    @post = Post.new(post_params)
-    if @post.save
+    post = current_user.posts.create!(post_params)
       redirect_to posts_path, notice: "投稿しました"
-    else
-      flash.now[:alert] = "投稿に失敗しました"
-      render :new
-    end
 
     # @post = current_user.posts.new(post_params)
     # if @post.save
