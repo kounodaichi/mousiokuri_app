@@ -1,7 +1,6 @@
 <body id="sheet">
 <br>
 <br>
-<br>
 <%= search_form_for @q do |f| %>
   <%= f.text_field :title_cont, class: "search-form", placeholder: "キーワード検索" %>
   <%= f.submit "検索", class: "search-btn" %>
@@ -20,7 +19,7 @@
     <% @posts.each.with_index(1) do |post, i| %>
       <tr>
         <th><%= post.created_at.strftime("%Y-%m-%d %H:%M") %></th>
-        <td><%= post.category %></td>
+        <td><%= post.user_id %></td>
         <td><%= post.title %></td>
         <td>
           <%= link_to "詳細", post ,class: "btn btn-success"%>

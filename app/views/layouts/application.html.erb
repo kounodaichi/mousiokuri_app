@@ -18,12 +18,10 @@
       </div>
     </header>
      <%= render "layouts/flash" %>
-    <main>
-      <br>
-      <%= render "layouts/flash" %>
-      <div class="base-container <%= max_width %>">
-        <%= yield %>
-      </div>
-    </main>
+    <hr>
+    <%= render "layouts/flash" %>
+    <div class="base-container <%= max_width %>">
+      <%= yield %>
+    </div>
   </body>
 </html>
