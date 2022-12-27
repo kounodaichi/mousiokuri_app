@@ -18,7 +18,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = current_user.posts.create!(post_params)
+    @post = current_user.posts.new(post_params)
     if @post.save
       redirect_to posts_path, notice: "投稿しました"
     else
