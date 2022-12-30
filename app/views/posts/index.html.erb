@@ -1,44 +1,46 @@
-<body id="sheet">
-<br>
-<br>
-<%= search_form_for @q do |f| %>
-  <%= f.text_field :title_cont, class: "search-form", placeholder: "キーワード検索" %>
-  <%= f.submit "検索", class: "search-btn" %>
-<% end %>
-<table class="table table-bordered table-striped mt-4">
-  <thead class="table-primary">
-    <tr>
-      <th scope="col">投稿時間</th>
-      <th scope="col">投稿者</th>
-      <th scope="col>">タイトル</th>
-      <th scope="col"></th>
-      <th scope="col>">閲覧</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @posts.each.with_index(1) do |post, i| %>
+<% if user_signed_in? %>
+  <body id="sheet">
+  <br>
+  <br>
+  <%= search_form_for @q do |f| %>
+    <%= f.text_field :title_cont, class: "search-form", placeholder: "キーワード検索" %>
+    <%= f.submit "検索", class: "search-btn" %>
+  <% end %>
+  <table class="table table-bordered table-striped mt-4">
+    <thead class="table-primary">
       <tr>
-        <th><%= post.created_at.strftime("%Y-%m-%d %H:%M") %></th>
-        <td><%= post.user_id %></td>
-        <td><%= post.title %></td>
-        <td>
-          <%= link_to "詳細", post ,class: "btn btn-success"%>
-          <% if current_user.id == post.user_id %>
-            <%= link_to "編集", edit_post_path(post) ,class: "btn btn-primary"%>
-            <%= link_to "削除", post, method: :delete, data: { confirm: "削除しますか?" } ,class: "btn btn-danger"%>
-          <% end %>
-        </td>
-        <td>
-          <p id="post-<%= post.id %>">
-            <% if post.favorited_by?(current_user) %>
-              <%= render "favorite", post: post %>
-            <% else %>
-              <%= render "unfavorite", post: post %>
-            <% end %>
-          </p>
-        </td>
+        <th scope="col">投稿時間</th>
+        <th scope="col">投稿者</th>
+        <th scope="col>">タイトル</th>
+        <th scope="col"></th>
+        <th scope="col>">閲覧</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-<%= paginate @posts %>
+    </thead>
+    <tbody>
+      <% @posts.each.with_index(1) do |post, i| %>
+        <tr>
+          <th><%= post.created_at.strftime("%Y-%m-%d %H:%M") %></th>
+          <td><%= post.user_id %></td>
+          <td><%= post.title %></td>
+          <td>
+              <%= link_to "詳細", post ,class: "btn btn-success"%>
+              <% if current_user.id == post.user_id %>
+                <%= link_to "編集", edit_post_path(post) ,class: "btn btn-primary"%>
+                <%= link_to "削除", post, method: :delete, data: { confirm: "削除しますか?" } ,class: "btn btn-danger"%>
+              <% end %>
+          </td>
+          <td>
+            <p id="post-<%= post.id %>">
+              <% if post.favorited_by?(current_user) %>
+                <%= render "favorite", post: post %>
+              <% else %>
+                <%= render "unfavorite", post: post %>
+              <% end %>
+            </p>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= paginate @posts %>
+<% end %>

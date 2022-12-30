@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  
+
   resources :blogs
   get 'begin' => 'posts#begin'
   get 'daycare' => 'posts#daycare'
