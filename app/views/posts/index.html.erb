@@ -11,6 +11,7 @@
       <tr>
         <th scope="col">投稿時間</th>
         <th scope="col">投稿者</th>
+        <th scope="col">宛先</th>
         <th scope="col>">タイトル</th>
         <th scope="col"></th>
         <th scope="col>">閲覧</th>
@@ -20,7 +21,8 @@
       <% @posts.each.with_index(1) do |post, i| %>
         <tr>
           <th><%= post.created_at.strftime("%Y-%m-%d %H:%M") %></th>
-          <td><%= post.user_id %></td>
+          <td><%= post.user.email if post.user %></td>
+          <td><%= post.category %></td>
           <td><%= post.title %></td>
           <td>
               <%= link_to "詳細", post ,class: "btn btn-success"%>
