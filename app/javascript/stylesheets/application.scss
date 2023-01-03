@@ -582,19 +582,26 @@ body{
   background-image: linear-gradient(to left, #fd4b4b 0%, #faaaaa 100%);
 }
 
+.show1 {
+  padding: 1rem 3rem;
+  display: inline-block;
+  color: rgb(68, 68, 68);
+  border-radius: 100vh;
+  background-image: linear-gradient(to left, #477ef5 0%, #477ef5 100%);
+}
 .show2 {
   padding: 1rem 3rem;
   display: inline-block;
   color: rgb(68, 68, 68);
   border-radius: 100vh;
-  background-image: linear-gradient(to left, #7e7e7e 0%, #fdfdfd 100%);
+  background-image: linear-gradient(to left, #3e8f4c 0%, #3e8f4c 100%);
 }
 .show3 {
   padding: 1rem 2rem;
   display: inline-block;
   color: rgb(68, 68, 68);
   border-radius: 100vh;
-  background-image: linear-gradient(to left, #8f8f8f 0%, #fab2b2 100%);
+  background-image: linear-gradient(to left, #ce3d55 0%, #ce3d55 100%);
 }
 
 .hr {
