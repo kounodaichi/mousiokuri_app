@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   def index
-    @today = Date.today #今日の日付
-    @task = task.new
+    @today = Date.today #今日の日付    
+    @task = Task.new
     @tasks = Task.where(done_at:nil).order(:time) #未完了タスクかつ期限が近い順に並べ替え
     @tasks_done = Task.where.not(done_at:nil) #完了タスク
   end

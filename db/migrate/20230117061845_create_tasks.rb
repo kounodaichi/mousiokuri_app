@@ -1,8 +1,9 @@
 class CreateTasks < ActiveRecord::Migration[6.1]
   def change
     create_table :tasks do |t|
-      t.date :time
-      t.datetime :done_at
+      t.date :time 
+      t.datetime :done_at 
+      t.timestamps
     end
   end
 end

@@ -1,17 +1,18 @@
+<br>
 <h1>Tweets#index</h1>
-<%= form_for @task do |f| %>
-    <%= f.label :タスク名 %>
-    <%= f.text_field :title, :size => 40 %><br>
-    <%= f.label :締切 %>
-    <%= f.date_field :time, :size => 140 %>
+<%= form_for @task, url: tasks_path do |f| %>
+  <%= f.label :タスク名 %>
+  <%= f.text_field :title, :size => 40 %><br>
+  <%= f.label :締切 %>
+  <%= f.date_field :time, :size => 140 %>
   <%= f.submit "Tweetする" %>
 <% end %>
 
-<div class="task-container"%>
+<div class="task-container" >
   <div class="item">
     <h1>タスク一覧</h1>
     <% @tasks.each do |t| %> #@tweetsの中身は未完了タスク
-      <div class="task">
+
         <% if (t.time - @today).to_i > -1 %> #期限が切れていないタスクの表示
           タスク名:<b><%= t.title %></b><br>
           締切:<%= t.time %><br>
@@ -21,9 +22,8 @@
           <b><%= t.title %></b><br>
           締切:<%= t.time %><br>
           <%= (t.time - @today).to_i * -1 %>日期限が超過しています😀<br> #何日期限超過かを計算
-          <%= button_to 'Done', done_path(t.id), method: :post %><br><br> #タスク完了ボタン
+          <%= button_to 'Done', done_path(t.id), method: :post %><br><br> 
         <% end %>
-      </div>
     <% end %>
   </div>
 </div>

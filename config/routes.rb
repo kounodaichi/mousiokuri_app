@@ -14,9 +14,13 @@ Rails.application.routes.draw do
     resources :posts, only: [:index]
     resources :comments, only: [:create]  
   end
-
+ 
+  resources :tasks
   post '/tasks/:id/done' => 'tasks#done',   as: 'done'
-  get 'task' => 'tasks#index'
+  get 'tasks' => 'tasks#index'
+  
+
+  
   devise_scope :user do
     post "users/guest_sign_in", to: "users/sessions#guest_sign_in"
   end
