@@ -5,6 +5,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :posts, dependent: :destroy
   has_many :comments 
+  has_many :tasks
   has_many :favorites, dependent: :destroy
   has_many :favorited_posts, through: :favorites, source: :post
   devise :database_authenticatable, :registerable,

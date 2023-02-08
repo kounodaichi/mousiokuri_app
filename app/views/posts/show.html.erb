@@ -5,8 +5,8 @@
 <div style="text-align:center">
   <h1 class="show">投稿詳細</h1>
 </div>
-<h3 class ="show1"><%= @post.user.email %>→<%= @post.category %></h3>
 <h3 class="show2"><%= @post.created_at.strftime("%Y-%m-%d %H:%M") %></h3>
+<h3 class ="show1"><%= @post.user.email %>→<%= @post.category %></h3>
 <br>
 <h3 class="show3">【<%= @post.title %>】</h3>
 <h3>内容:<%= @post.content %></h3>
@@ -14,7 +14,7 @@
   <p><%= image_tag @post.image.url %></p>
 <% end %>
 <hr>
-<h2>コメントをする</h2>
+<h2>コメント</h2>
 <%=form_with(model:[@post, @comment], method: :post) do |f| %>
   <h3>
     <%= f.text_area :comment_content %>
@@ -26,9 +26,9 @@
 <h2> コメント一覧 </h2>
 <% @comments.each do |comment| %>
   <h3>
+  【<%= comment.user.email %>】
   <%= comment.created_at.strftime("%Y-%m-%d %H:%M") %>
   <%= comment.comment_content %>  
-  
   </h3>
 <% end %>
 

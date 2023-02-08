@@ -17,7 +17,7 @@ Rails.application.routes.draw do
  
   resources :tasks
   post '/tasks/:id/done' => 'tasks#done',   as: 'done'
-  get 'tasks' => 'tasks#index'
+  # get 'tasks' => 'tasks#index'
   
 
   
