@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   PER_PAGE = 10
-  before_action :authenticate_user!, only: [:show, :create]
+  before_action :authenticate_user!
   before_action :set_post, only: %i[edit update destroy]
   def index
     @q = Post.ransack(params[:q])

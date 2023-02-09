@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+  before_action :authenticate_user!
   PER_PAGE = 20
   def index
     @today = Date.today #今日の日付
