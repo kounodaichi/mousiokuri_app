@@ -1,7 +1,6 @@
 class TasksController < ApplicationController
   PER_PAGE = 20
   def index
-    # @tasks = Task.page(params[:page]).per(PER_PAGE)
     @today = Date.today #今日の日付
     @task = Task.new
     @tasks = Task.where(done_at:nil).order(:time) #未完了タスクかつ期限が近い順に並べ替え
@@ -11,8 +10,8 @@ class TasksController < ApplicationController
  
 
   def create
-  task = current_user.tasks.create!(task_params)
-    if task.save
+    @task = current_user.tasks.new(task_params)
+    if @task.save
       redirect_to :action => "index"
     else
       redirect_to :action => "new"
@@ -30,6 +29,6 @@ class TasksController < ApplicationController
 
   private
   def task_params
-    params.require(:task).permit(:time,:title,:done_at) #カラムの追加をお忘れなく
+    params.require(:task).permit(:time,:title,:done_at)
   end
 end

@@ -1,6 +1,7 @@
 <body id="sheet">
 <br>
 <br>
+<%= render "layouts/task_error_messages" %>
 <h1>【To Doリスト】</h1>
 <%= form_for @task, url: tasks_path do |f| %>
   <%= f.label :タスク名 %>
@@ -14,20 +15,19 @@
   <div class="task-container" >
     <div class="item">
       <h1 class="show3">やることリスト</h1><br>
-      <% @tasks.each do |t| %> 
-        <%= @task.user.email if @task.user %>
-        
-          <% if (t.time - @today).to_i > -1 %> 
+      <% @tasks.each do |t,task| %> 
+        <% if (t.time - @today).to_i > -1 %> 
             タスク名:<b><%= t.title %></b><br>
             締切:<%= t.time %><br>
             残り:<%= (t.time - @today).to_i %>日<br>
             <%= button_to 'タスク完了', done_path(t.id), method: :post %><br><br> 
-          <% else %> 
+        <% else %> 
             <b><%= t.title %></b><br>
+            <% t.user.id %>
             締切:<%= t.time %><br>
             <%= (t.time - @today).to_i * -1 %>日期限が超過しています<br>
             <%= button_to 'Done', done_path(t.id), method: :post %><br><br> 
-          <% end %>
+        <% end %>
           <hr>
       <% end %>
     </div>

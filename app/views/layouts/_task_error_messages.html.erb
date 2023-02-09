@@ -1,10 +1,9 @@
-<% if @post.errors.any? %>
+<% if @task.errors.any? %>
   <div>
     <ul>
-      <% @post.errors.full_messages.each do |msg| %>
+      <% @task.errors.full_messages.each do |msg| %>
         <li><span style="color: red;"><%= msg %></span></li>
       <% end %>
     </ul>
   </div>
 <% end %>
-
