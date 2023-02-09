@@ -17,13 +17,13 @@
       <h1 class="show3">やることリスト</h1><br>
       <% @tasks.each do |t,task| %> 
         <% if (t.time - @today).to_i > -1 %> 
+            投稿者:<%= t.user.email %><br>
             タスク名:<b><%= t.title %></b><br>
             締切:<%= t.time %><br>
             残り:<%= (t.time - @today).to_i %>日<br>
             <%= button_to 'タスク完了', done_path(t.id), method: :post %><br><br> 
         <% else %> 
             <b><%= t.title %></b><br>
-            <% t.user.id %>
             締切:<%= t.time %><br>
             <%= (t.time - @today).to_i * -1 %>日期限が超過しています<br>
             <%= button_to 'Done', done_path(t.id), method: :post %><br><br> 
@@ -37,6 +37,7 @@
     <h1 class="show2">完了済み</h1><br>
     <% @tasks_done.each do |t| %> 
       <div class="task">
+        投稿者:<%= t.user.email %><br>
         タスク名:<b><%= t.title %></b><br>
         <% current_user.email %>
         完了日:<%= t.done_at.strftime('%Y-%m-%d') %> <br> 
