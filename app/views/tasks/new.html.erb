@@ -1,11 +1,18 @@
 <body id="sheet">
 <br>
-<%= render "layouts/task_error_messages" %>
-<h1>【To Doリスト】</h1>
-<%= form_for @task, url: tasks_path do |f| %>
-  <%= f.label :タスク名 %>
-  <%= f.text_field :title, :size => 40 %><br>
-  <%= f.label :締切 %>
-  <%= f.date_field :time, :size => 140 %>
-  <%= f.submit "Tweetする" %>
-<% end %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div style= "text-align:center">
+  <%= render "layouts/task_error_messages" %>
+  <h1>【やることリスト】</h1>
+  <%= form_for @task, url: tasks_path do |f| %>
+    <%= f.label :タスク名 %>
+    <%= f.text_field :title, :size => 40 %><br>
+    <%= f.label :締切 %>
+    <%= f.date_field :time, :size => 140 %>
+    <%= f.submit "Tweetする" %>
+  <% end %>
+</div>

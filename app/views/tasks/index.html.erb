@@ -3,7 +3,8 @@
 <br>
   <div class="task-container" >
     <div class="item">
-      <h1 class="show3">やることリスト</h1><br>
+      <h1 class="show3">やることリスト</h1>
+      <a href="tasks/new" class="btn btn-radius-solid btn--shadow">やることリスト追加<i class="fas fa-angle-right fa-position-right"></i></a><br>
       <% @tasks.each do |t,task| %> 
         <% if (t.time - @today).to_i > -1 %> 
             投稿者:<%= t.user.email %><br>
