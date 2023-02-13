@@ -13,11 +13,12 @@ class TasksController < ApplicationController
  end
 
   def create
-    @task = current_user.tasks.create!(task_params)
+    @task = current_user.tasks.new(task_params)
     if @task.save
-      redirect_to :action=> "index"
+      redirect_to :action => "index", notice: "投稿しました"
     else
-      redirect_to :action => "new"
+      flash.now[:alert] = "投稿に失敗しました"
+      render :new
     end
   end
 
