@@ -8,12 +8,14 @@ class TasksController < ApplicationController
     @tasks_done = Task.where.not(done_at:nil) #完了タスク
   end
 
- 
+ def new
+    @task = Task.new
+ end
 
   def create
-    @task = current_user.tasks.new(task_params)
+    @task = current_user.tasks.create!(task_params)
     if @task.save
-      redirect_to :action => "index"
+      redirect_to :action=> "index"
     else
       redirect_to :action => "new"
     end
