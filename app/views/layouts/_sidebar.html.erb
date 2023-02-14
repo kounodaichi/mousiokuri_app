@@ -1,6 +1,6 @@
 <div class="header">
   <div class="header-name">
-    <h2 style="text-align:center">◯◯病院　利用者申し送り</h2>
+    <h2 style="text-align:center">◯◯クリニック　利用者申し送り</h2>
   </div>
 <h6 style="text-align:right">
   <% if user_signed_in? %>
@@ -26,7 +26,7 @@
       <li><%= link_to "[老健宛]"  ,'/healthcarefacility' %></li>
       <li><%= link_to "[病棟宛]" ,'/ward' %></li>
       <li><%= link_to "[外来宛]" ,'outpatient'  %></li>
-      <li><%= link_to "新規投稿", new_post_path %></li>
+      <li><%= link_to "申し送りを投稿", new_post_path %></li>
       <li><%= link_to "タスク管理",tasks_path %></li>
     </ul>
   </div>

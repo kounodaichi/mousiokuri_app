@@ -13,7 +13,7 @@
     <% @ward.each.with_index(1) do |post, i| %>
       <tr>
         <th><%= post.created_at %></th>
-        <td><%= post.category %></td>
+        <td><%= post.user.email %></td>
         <td><%= post.title %></td>
         <td>
           <%= link_to "詳細", post ,class: "btn btn-success"%>

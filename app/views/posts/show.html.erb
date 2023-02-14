@@ -9,7 +9,7 @@
 <h3 class ="show1"><%= @post.user.email %>→<%= @post.category %></h3>
 <br>
 <h3 class="show3">【<%= @post.title %>】</h3>
-<h3>内容:<%= @post.content %></h3>
+<h3><%= @post.content %></h3>
 <% if @post.image? %>
   <p><%= image_tag @post.image.url %></p>
 <% end %>
@@ -21,14 +21,16 @@
     <%= f.hidden_field :post_id, :value => @post.id %>
     <%= f.submit "送信" %>
   </h3>
+  <hr>
 <% end %>
 
 <h2> コメント一覧 </h2>
 <% @comments.each do |comment| %>
   <h3>
-  【<%= comment.user.email %>】
+  【<%= comment.user.email %>】<br>
   <%= comment.created_at.strftime("%Y-%m-%d %H:%M") %>
   <%= comment.comment_content %>  
   </h3>
+  <hr>
 <% end %>
 

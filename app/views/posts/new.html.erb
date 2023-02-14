@@ -10,7 +10,7 @@
 <br>
 <h5 style="text-align:center">
   <%= form_with model: @post, local: true do |form| %>
-    <p><%= form.select :category, [["デイケア"], ["老健"], ["病棟"],["病棟"]], include_blank: "部署名" %></p>
+    <p><%= form.select :category, [["デイケア"], ["老健"], ["病棟"],["病棟"]], include_blank: "宛先の部署名" %></p>
     <p><%=form.label :title, "タイトル"%></p>
     <p><%=form.text_field :title %></p>
     <p><%= form.label :content, "内容" %></p>

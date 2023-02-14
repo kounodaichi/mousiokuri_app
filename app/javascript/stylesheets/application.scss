@@ -156,7 +156,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 .sample_h_17{
   font-size: 1.5em;/* フォントサイズ */
   font-weight: bold;/* フォント太さ */
-  padding-top: 500px;
+  padding-top: 450px;
   padding-bottom: 3px;
   margin-bottom: 50px;
   position: relative;
@@ -176,55 +176,11 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   z-index: 0;
 }
 
-.sample_h_20{
-  font-size: 1.5em;/* フォントサイズ */
-  font-weight: bold;/* フォント太さ */
-  padding-top: 1em;
-  padding-bottom: 1em;
-  padding-left: 2.5em;
-  margin-bottom: 2em;
-  position: relative;
-  background-color: #2e535a;/* 背景色 */
-  border-radius: 15px;/* 角丸 */
-  color: #ffffff;/* フォント色 */
-}
+
   
-  .sample_h_20:before {
-  position: absolute;
-  font-family: "Font Awesome 5 Free";
-  content: "\f075";
-  font-weight: 900;
-  font-size: 1em;
-  left : 1em;
-}
+  
 
-.balloon1-top {
-  position: relative;
-  display: inline-block;
-  margin: 1.5em 0;
-  margin-top: -30px;
-  padding: 7px 10px;
-  min-width: 120px;
-  max-width: 100%;
-  color: #555;
-  font-size: 16px;
-  background: #abcde0;
-}
 
-.balloon1-top:before {
-  content: "";
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  margin-left: -15px;
-  border: 15px solid transparent;
-  border-bottom: 15px solid #e0edff;
-}
-
-.balloon1-top p {
-  margin: 0;
-  padding: 0;
-}
 
 .arrow_box{
   position:relative;
@@ -619,4 +575,11 @@ a.btn-radius-solid:hover {
   background: -webkit-gradient(linear, left bottom, left top, from(#f1e767), to(#feb645));
   background: -webkit-linear-gradient(bottom, #53eb2d 0%, #757575 100%);
   background: linear-gradient(to top, #53eb2d 0%, #757575 100%);
+}
+
+ .first {
+  padding: 0.5em;/*文字周りの余白*/
+  color: #010101;/*文字色*/
+  background: #bdc9da;/*背景色*/
+  border-bottom: solid 3px #516ab6;/*下線*/
 }
