@@ -577,9 +577,71 @@ a.btn-radius-solid:hover {
   background: linear-gradient(to top, #53eb2d 0%, #757575 100%);
 }
 
- .first {
+.first {
   padding: 0.5em;/*文字周りの余白*/
   color: #010101;/*文字色*/
   background: #bdc9da;/*背景色*/
   border-bottom: solid 3px #516ab6;/*下線*/
 }
+
+.image1 {
+  width: 320px;
+  height: 250px;
+  overflow: hidden;
+ border-radius: 10%;
+ margin-right: 200px;
+ margin-left: 200px;
+ margin-top: 50px;
+ margin-bottom: 50px;
+}
+
+.image2 {
+  width: 350px;
+  height: 110px;
+  overflow: hidden;
+ border-radius: 10%;
+ margin-right: 200px;
+ margin-left: 200px;
+ margin-bottom: 50px;
+}
+
+.image3 {
+  width: 420px;
+  height: 200px;
+  overflow: hidden;
+ border-radius: 10%;
+ margin-right: 200px;
+ margin-left: 200px;
+ margin-bottom: 50px;
+}
+
+.image4 {
+  width: 150px;
+  height: 170px;
+  overflow: hidden;
+ border-radius: 10%;
+ margin-right: 200px;
+ margin-left: 200px;
+ margin-bottom: 50px;
+}
+
+.image5 {
+  width: 800px;
+ 	height: 400px;
+ 	overflow: hidden;
+	border-radius: 10%;
+  margin-right: 200px;
+  margin-left: 200px;
+  margin-bottom: 50px;
+}
+
+.image6 {
+  width: 600px;
+ 	height: 600px;
+ 	overflow: hidden;
+	border-radius: 10%;
+  margin-right: 200px;
+  margin-left: 200px;
+  margin-bottom: 50px;
+}
+

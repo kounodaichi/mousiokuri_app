@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'ward' => 'posts#ward'
   get 'outpatient' => 'posts#outpatient'
 
-  root to: 'posts#index'
+  root to: 'posts#begin'
   resources :posts do
     resource :favorites, only: [ :create, :destroy]
     resources :posts, only: [:index]
