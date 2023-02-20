@@ -584,64 +584,174 @@ a.btn-radius-solid:hover {
   border-bottom: solid 3px #516ab6;/*下線*/
 }
 
-.image1 {
-  width: 320px;
-  height: 250px;
+.flex1{
+  display: flex;
+}
+.flex1 .image{
+  width: 600px;
+  height: 270px;
   overflow: hidden;
  border-radius: 10%;
- margin-right: 200px;
+ margin-right: 100px;
  margin-left: 200px;
  margin-top: 50px;
  margin-bottom: 50px;
 }
 
-.image2 {
+
+.flex2{
+  display: flex;
+  margin-bottom: 50px;
+}
+.flex2 .image {
   width: 350px;
   height: 110px;
   overflow: hidden;
  border-radius: 10%;
- margin-right: 200px;
+ margin-right: 100px;
  margin-left: 200px;
  margin-bottom: 50px;
 }
 
-.image3 {
-  width: 420px;
+.flex3{
+  display: flex;
+}
+.flex3 .image {
+  width: 580px;
   height: 200px;
   overflow: hidden;
  border-radius: 10%;
- margin-right: 200px;
+ margin-right: 120px;
  margin-left: 200px;
  margin-bottom: 50px;
 }
 
-.image4 {
+.flex4{
+  display: flex;
+}
+.flex4 .image {
   width: 150px;
   height: 170px;
   overflow: hidden;
  border-radius: 10%;
- margin-right: 200px;
+ margin-right: 50px;
  margin-left: 200px;
  margin-bottom: 50px;
 }
 
-.image5 {
+.flex5{
+  display: flex;
+}
+.flex5 .image {
   width: 800px;
  	height: 400px;
  	overflow: hidden;
 	border-radius: 10%;
-  margin-right: 200px;
+  margin-right: 0px;
   margin-left: 200px;
   margin-bottom: 50px;
 }
 
-.image6 {
+.flex6{
+  display: flex;
+}
+.flex6 .image {
   width: 600px;
  	height: 600px;
  	overflow: hidden;
 	border-radius: 10%;
-  margin-right: 200px;
+  margin-right: 50px;
   margin-left: 200px;
   margin-bottom: 50px;
 }
 
+.balloon1{
+  height: 150px;
+  margin-top: 100px;
+  margin-right: 50px;
+  position: relative;
+  padding: 20px;
+  background-color: #f2f3a0;
+  border: 2px solid #96941a;
+  border-radius: 10px;         /* 角丸を指定 */
+}
+.balloon2{
+  height: 150px;
+  margin-top: 0px;
+  margin-right: 50px;
+  position: relative;
+  padding: 20px;
+  background-color: #f2f3a0;
+  border: 2px solid #96941a;
+  border-radius: 10px;         /* 角丸を指定 */
+}
+.balloon3{
+  height: 180px;
+  margin-top: 0px;
+  margin-right: 80px;
+  margin-left: 0px;
+  position: relative;
+  padding: 20px;
+  background-color: #f2f3a0;
+  border: 2px solid #96941a;
+  border-radius: 10px;         /* 角丸を指定 */
+}
+.balloon4{
+  height: 120px;
+  margin-top: 0px;
+  margin-right: 50px;
+  position: relative;
+  padding: 20px;
+  background-color: #f2f3a0;
+  border: 2px solid #96941a;
+  border-radius: 10px;         /* 角丸を指定 */
+}
+.balloon5{
+  height: 265px;
+  width: 400px;
+  margin-top: 0px;
+  margin-right: 50px;
+  margin-left: 50px;
+  position: relative;
+  padding: 20px;
+  background-color: #f2f3a0;
+  border: 2px solid #96941a;
+  border-radius: 10px;         /* 角丸を指定 */
+}
+.balloon6{
+  height: 140px;
+  width: 400px;
+  margin-top: 0px;
+  margin-right: 50px;
+  position: relative;
+  padding: 20px;
+  background-color: #f2f3a0;
+  border: 2px solid #96941a;
+  border-radius: 10px;         /* 角丸を指定 */
+}
+
+/* 三角アイコン - 枠線付きの吹き出し */
+.balloon1::before,.balloon2::before,.balloon3::before,.balloon4::before,.balloon5::before,.balloon6::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -15px;
+  top: 20px;
+  border-right: 15px solid #96941a;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+.balloon1::before,.balloon2::before,.balloon3::after,.balloon4::before,.balloon5::before.balloon6::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -12px;
+  top: 20px;
+  border-right: 15px solid #96941a;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
