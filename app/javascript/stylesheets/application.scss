@@ -560,23 +560,6 @@ body{
   background-image: linear-gradient(to left, #ce3d55 0%, #ce3d55 100%);
 }
 
-.hr {
-  border-top: 20px solid #000;
-}
-  
-a.btn-radius-solid {
-  background: #f1e767;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1e767), to(#feb645));
-  background: -webkit-linear-gradient(top, #53eb2d 0%, #757575 100%);
-  background: linear-gradient(to bottom, #53eb2d 0%, #757575 100%);
-}
-
-a.btn-radius-solid:hover {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1e767), to(#feb645));
-  background: -webkit-linear-gradient(bottom, #53eb2d 0%, #757575 100%);
-  background: linear-gradient(to top, #53eb2d 0%, #757575 100%);
-}
-
 .first {
   padding: 0.5em;/*文字周りの余白*/
   color: #010101;/*文字色*/
@@ -620,8 +603,8 @@ a.btn-radius-solid:hover {
   width: 580px;
   height: 200px;
   overflow: hidden;
- border-radius: 10%;
- margin-right: 120px;
+ border-radius: 20%;
+ margin-right: 110px;
  margin-left: 200px;
  margin-bottom: 50px;
 }
@@ -666,8 +649,9 @@ a.btn-radius-solid:hover {
 }
 
 .balloon1{
-  height: 170px;
+  display: inline-block;
   margin-top: 100px;
+  margin-bottom: 130px;
   margin-right: 50px;
   position: relative;
   padding: 20px;
@@ -677,7 +661,7 @@ a.btn-radius-solid:hover {
 }
 .balloon2{
   width: 500px;
-  height: 250px;
+  display: inline-block;
   margin-top: 0px;
   margin-right: 50px;
   position: relative;
@@ -687,8 +671,9 @@ a.btn-radius-solid:hover {
   border-radius: 10px;         /* 角丸を指定 */
 }
 .balloon3{
-  height: 180px;
+  display: inline-block;
   margin-top: 0px;
+  margin-bottom: 120px;
   margin-right: 80px;
   margin-left: 0px;
   position: relative;
@@ -698,8 +683,9 @@ a.btn-radius-solid:hover {
   border-radius: 10px;         /* 角丸を指定 */
 }
 .balloon4{
-  height: 120px;
+  display: inline-block;
   margin-top: 0px;
+  margin-bottom: 130px;
   margin-right: 50px;
   position: relative;
   padding: 20px;
@@ -708,9 +694,10 @@ a.btn-radius-solid:hover {
   border-radius: 10px;         /* 角丸を指定 */
 }
 .balloon5{
-  height: 350px;
   width: 400px;
+  display: inline-block;
   margin-top: 0px;
+  margin-bottom: 70px;
   margin-right: 50px;
   margin-left: 50px;
   position: relative;
@@ -720,9 +707,10 @@ a.btn-radius-solid:hover {
   border-radius: 10px;         /* 角丸を指定 */
 }
 .balloon6{
-  height: 200px;
+  display: inline-block;
   width: 400px;
   margin-top: 0px;
+  margin-bottom: 430px;
   margin-right: 50px;
   position: relative;
   padding: 20px;
@@ -753,6 +741,89 @@ a.btn-radius-solid:hover {
   left: -12px;
   top: 20px;
   border-right: 15px solid #96941a;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+.line-comments {
+  display: inline-block;
+  margin-right: 50px;
+  margin-left: 70px;
+  padding: 0.5em;/*文字周りの余白*/
+  color: #ffffff;/*文字色*/
+  background: #7a84e0;/*背景色*/
+  border-bottom: solid 3px #516ab6;/*下線*/
+}
+
+
+.fb1 ,.fb2 ,.fb3{
+  display: inline-block;
+  position: relative;
+  width: 600px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  background-color: #86c486;
+  border: 2px solid #658557;
+  border-radius: 10px;        
+}
+.fb1::before ,.fb2::before ,.fb3::before{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -15px;
+  top: 20px;
+  border-right: 15px solid #658557;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+.fb1::after ,.fb2::after ,.fb3::after{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -12px;
+  top: 20px;
+  border-right: 15px solid #86c486;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+.fb-response1 ,.fb-response2 ,.fb-response3{
+  display: inline-block;
+  position: relative;
+  width: 500px;
+  padding: 20px;
+  margin-top: 50px;
+  margin-left: 40px;
+  background-color: #b3c2b3;
+  border: 2px solid #658557;
+  border-radius: 10px;     
+}
+.fb-response1::before ,.fb-response2::before ,.fb-response3::before{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  right: -15px;
+  top: 20px;
+  border-left: 15px solid #658557;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+.fb-response1::after ,.fb-response2::after ,.fb-response3::after{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  right: -12px;
+  top: 20px;
+  border-left: 15px solid #b3c2b3;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
 }
