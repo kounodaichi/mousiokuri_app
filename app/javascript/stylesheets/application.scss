@@ -351,6 +351,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 
 .list2 {
+  display: inline-block;
   padding: 1rem 3rem;
   margin-right: 400px;
   margin-left: 400px;
@@ -385,6 +386,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 
 .list3 {
+  display: inline-block;
   padding: 1rem 3rem;
   margin-right: 400px;
   margin-left: 400px;
@@ -560,6 +562,13 @@ body{
   background-image: linear-gradient(to left, #ce3d55 0%, #ce3d55 100%);
 }
 
+.title{
+  display: flex;
+}
+.post-title{
+  padding: 1rem 3rem;
+  margin-left: -40px;
+}
 .first {
   padding: 0.5em;/*文字周りの余白*/
   color: #010101;/*文字色*/

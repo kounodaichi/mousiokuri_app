@@ -8,7 +8,10 @@
 <h3 class="show2"><%= @post.created_at.strftime("%Y-%m-%d %H:%M") %></h3>
 <h3 class ="show1"><%= @post.user.email %>→<%= @post.category %></h3>
 <br>
-<h3 class="show3">【<%= @post.title %>】</h3>
+<div class="title">
+  <h3 class="show3">タイトル</h3>
+  <h3 class="post-title">【<%= @post.title %>】</h3>
+</div>
 <h3><%= @post.content %></h3>
 <% if @post.image? %>
   <p><%= image_tag @post.image.url %></p>
