@@ -821,3 +821,18 @@ a.btn-radius-solid:hover {
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
 }
+
+.show4 {
+  padding: 1rem 3rem;
+  display: inline-block;
+  color: rgb(68, 68, 68);
+  border-radius: 100vh;
+  background-image: linear-gradient(to left, #da6969 0%, #da6969 100%);
+}
+.show5 {
+  padding: 1rem 2rem;
+  display: inline-block;
+  color: rgb(68, 68, 68);
+  border-radius: 100vh;
+  background-image: linear-gradient(to left, #4b96c9 0%, #4b96c9 100%);
+}
