@@ -4,6 +4,9 @@ ja:
     models:
       post: メッセージ
     attributes:
+      task:
+        title: タイトル
+        time: 時間
       post:
         title: タイトル
         content: 内容
