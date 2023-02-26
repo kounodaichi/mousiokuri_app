@@ -279,43 +279,15 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 
 .midashi {
+  display: inline-block;
   position: relative;
-  padding: 5px 26px 5px 42px;
-  background: #f5cbf3;
-  font-size: 20px;
-  color: #2d2d2d;
-  margin-left: -33px;
-  line-height: 1.3;
-  border-bottom: solid 3px rgb(253, 164, 226);
-  z-index:-2;
+  padding: 1em 1.5em;
+  background: -webkit-linear-gradient(to right, rgb(0, 238, 255), transparent);
+  background: linear-gradient(to right, rgb(0, 238, 255), transparent);
+  color: #522828;
+
 }
 
-.midashi:before {
-  position: absolute;
-  content: '';
-  left: -2px;
-  top: -2px;
-  width: 0;
-  height: 0;
-  border: none;
-  border-left: solid 40px rgb(190, 189, 189);
-  border-bottom: solid 79px transparent;
-  z-index: -1;
-  margin-left: 20px;
-}
-
-.midashi:after {
-  position: absolute;
-  content: '';
-  right: -3px;
-  top: -7px;
-  width: 0;
-  height: 0;
-  border: none;
-  border-left: solid 40px transparent;
-  border-bottom: solid 79px rgb(190, 189, 189);
-  z-index: -1;
-}
 
 .list {
   padding: 1rem 3rem;
@@ -537,7 +509,7 @@ body{
   margin-bottom: 15px;
   color: rgb(68, 68, 68);
   border-radius: 100vh;
-  background-image: linear-gradient(to left, #fd4b4b 0%, #faaaaa 100%);
+  background-image: linear-gradient(to left, #7abb6a 0%, #48924c 100%);
 }
 
 .show1 {
@@ -545,21 +517,21 @@ body{
   display: inline-block;
   color: rgb(68, 68, 68);
   border-radius: 100vh;
-  background-image: linear-gradient(to left, #477ef5 0%, #477ef5 100%);
+  background-image: linear-gradient(to left, #8f8f8f 0%, #8f8f8f 100%);
 }
 .show2 {
   padding: 1rem 3rem;
   display: inline-block;
   color: rgb(68, 68, 68);
   border-radius: 100vh;
-  background-image: linear-gradient(to left, #3e8f4c 0%, #3e8f4c 100%);
+  background-image: linear-gradient(to left, #8f8f8f 0%, #8f8f8f 100%);
 }
 .show3 {
   padding: 1rem 2rem;
   display: inline-block;
   color: rgb(68, 68, 68);
   border-radius: 100vh;
-  background-image: linear-gradient(to left, #ce3d55 0%, #ce3d55 100%);
+  background-image: linear-gradient(to left, #c7c7c7 0%, #c7c7c7 100%);
 }
 
 .title{
