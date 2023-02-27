@@ -9,7 +9,8 @@ import Rails from "@rails/ujs"
  import "channels"
  import "bootstrap/dist/js/bootstrap"
  require("../stylesheets/application.scss")
-
+ import 'bootstrap';
+ import '../stylesheets/application';
 
 Rails.start()
 Turbolinks.start()
