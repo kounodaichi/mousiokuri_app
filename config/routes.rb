@@ -15,8 +15,8 @@ Rails.application.routes.draw do
     resources :comments, only: [:create]  
   end
  
-  resources :tasks
-  post '/tasks/:id/done' => 'tasks#done',   as: 'done'
+  resources :tweets
+  post '/tweets/:id/done' => 'tweets#done',   as: 'done'
   # get 'tasks' => 'tasks#index'
   
 

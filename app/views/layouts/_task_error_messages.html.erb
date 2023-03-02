@@ -1,7 +1,7 @@
-<% if @task.errors.any? %>
+<% if @tweet.errors.any? %>
   <div>
     <ul>
-      <% @task.errors.full_messages.each do |msg| %>
+      <% @tweet.errors.full_messages.each do |msg| %>
         <li><span style="color: red;"><%= msg %></span></li>
       <% end %>
     </ul>

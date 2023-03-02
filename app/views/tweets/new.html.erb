@@ -8,7 +8,7 @@
 <div style= "text-align:center">
   <%= render "layouts/task_error_messages" %>
   <h1 class= "list2">やることリスト</h1>
-  <%= form_for @task, url: tasks_path do |f| %>
+  <%= form_for @tweet, url: tweets_path do |f| %>
     <%= f.label :タスク名 %>
     <%= f.text_field :title, :size => 40 %><br>
     <%= f.label :締切 %>

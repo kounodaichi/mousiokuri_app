@@ -1,11 +1,11 @@
 <body id="sheet">
 <br>
 <br>
-  <div class="task-container" >
+  <div class="tweet-container" >
     <div class="item">
       <h1 class="show4">やることリスト</h1>
-      <a href="tasks/new" class="btn btn-radius-solid btn--shadow">やることリストを追加する<i class="fas fa-angle-right fa-position-right"></i></a><br>
-      <% @tasks.each do |t,task| %> 
+      <a href="tweets/new" class="btn btn-radius-solid btn--shadow">やることリストを追加する<i class="fas fa-angle-right fa-position-right"></i></a><br>
+      <% @tweets.each do |t,tweet| %> 
         <% if (t.time - @today).to_i > -1 %> 
             投稿者:<%= t.user.email %><br>
             タスク名:<b><%= t.title %></b><br>
@@ -28,7 +28,7 @@
 
   <div class="item">
     <h1 class="show5">完了済み</h1><br>
-    <% @tasks_done.each do |t| %> 
+    <% @tweets_done.each do |t| %> 
       <div class="task">
         投稿者:<%= t.user.email %><br>
         タスク名:<b><%= t.title %></b><br>
