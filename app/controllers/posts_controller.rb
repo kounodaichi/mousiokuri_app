@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  protect_from_forgery
   PER_PAGE = 10
   before_action :authenticate_user!
   before_action :set_post, only: %i[edit update destroy]
