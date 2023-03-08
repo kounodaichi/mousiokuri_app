@@ -4,7 +4,7 @@ ja:
     models:
       post: メッセージ
     attributes:
-      task:
+      tweet:
         title: タイトル
         time: 時間
       post:
