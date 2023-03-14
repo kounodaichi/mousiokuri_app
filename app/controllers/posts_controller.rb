@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PostsController < ApplicationController
   protect_from_forgery
   PER_PAGE = 10
@@ -21,9 +23,9 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.new(post_params)
     if @post.save
-      redirect_to posts_path, notice: "投稿しました"
+      redirect_to posts_path, notice: '投稿しました'
     else
-      flash.now[:alert] = "投稿に失敗しました"
+      flash.now[:alert] = '投稿に失敗しました'
       render :new
     end
 
@@ -41,9 +43,9 @@ class PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-      redirect_to posts_path, notice: "更新しました"
+      redirect_to posts_path, notice: '更新しました'
     else
-      flash.now[:alert] = "更新に失敗しました"
+      flash.now[:alert] = '更新に失敗しました'
       render :edit
     end
   end
@@ -53,26 +55,24 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
-
   def daycare
-    @daycare = Post.where(category:"デイケア")
+    @daycare = Post.where(category: 'デイケア')
   end
 
-  def healthcarefacility 
-    @healthcarefacility = Post.where(category:"老健")
+  def healthcarefacility
+    @healthcarefacility = Post.where(category: '老健')
   end
 
   def ward
-    @ward = Post.where(category:"病棟")
+    @ward = Post.where(category: '病棟')
   end
 
   def outpatient
-    @outpatient = Post.where(category:"外来")
+    @outpatient = Post.where(category: '外来')
   end
 
-
-
   private
+
   def set_post
     @post = current_user.posts.find(params[:id])
     @post = Post.find(params[:id])

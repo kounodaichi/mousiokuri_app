@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   devise_for :users
 
@@ -10,18 +12,16 @@ Rails.application.routes.draw do
 
   root to: 'posts#begin'
   resources :posts do
-    resource :favorites, only: [ :create, :destroy]
+    resource :favorites, only: %i[create destroy]
     resources :posts, only: [:index]
-    resources :comments, only: [:create]  
+    resources :comments, only: [:create]
   end
- 
-  resources :tweets
-  post '/tweets/:id/done' => 'tweets#done',   as: 'done'
-  # get 'tasks' => 'tasks#index'
-  
 
-  
+  resources :tweets
+  post '/tweets/:id/done' => 'tweets#done', as: 'done'
+  # get 'tasks' => 'tasks#index'
+
   devise_scope :user do
-    post "users/guest_sign_in", to: "users/sessions#guest_sign_in"
+    post 'users/guest_sign_in', to: 'users/sessions#guest_sign_in'
   end
 end

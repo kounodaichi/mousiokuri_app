@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 class BlogsController < ApplicationController
   def index
     @blogs = Blog.all
     @blog = Blog.new
   end
-  
+
   def new
     @blog = Blog.new
   end
@@ -20,7 +22,7 @@ class BlogsController < ApplicationController
   def destroy
     @blog = Blog.find(params[:id])
     @blog.destroy
-    redirect_to blogs_path, notice:"削除しました"
+    redirect_to blogs_path, notice: '削除しました'
   end
 
   def edit
@@ -30,7 +32,7 @@ class BlogsController < ApplicationController
   def update
     @blog = Blog.find(params[:id])
     if @blog.update(blog_parameter)
-      redirect_to blogs_path, notice: "編集しました"
+      redirect_to blogs_path, notice: '編集しました'
     else
       render 'edit'
     end
@@ -41,5 +43,4 @@ class BlogsController < ApplicationController
   def blog_parameter
     params.require(:blog).permit(:title, :content, :start_time)
   end
-
 end

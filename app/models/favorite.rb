@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Favorite < ApplicationRecord
   belongs_to :user
   belongs_to :post
@@ -6,5 +8,4 @@ class Favorite < ApplicationRecord
     scope: :post_id,
     message: :duplicated
   }
-  
 end

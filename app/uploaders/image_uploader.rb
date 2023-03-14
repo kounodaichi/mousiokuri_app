@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
@@ -6,12 +8,13 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Choose what kind of storage to use for this uploader:
   storage :file
   def extension_whitelist
-    %w(jpg jpeg gif png)
+    %w[jpg jpeg gif png]
   end
 
   def size_range
-     500.megabytes
+    500.megabytes
   end
+
   # belongs_to :post, optional: true
   # storage :fog
   # Override the directory where uploaded files will be stored.
@@ -21,16 +24,16 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
-   def default_url(*args)
-  #   # For Rails 3.1+ asset pipeline compatibility:
-  #   # ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
-  #
-    "/images/fallback/" + [version_name, "default.png"].compact.join('_')
-   end
+  def default_url(*_args)
+    #   # For Rails 3.1+ asset pipeline compatibility:
+    #   # ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
+    #
+    "/images/fallback/#{[version_name, 'default.png'].compact.join('_')}"
+  end
 
-   include CarrierWave::MiniMagick
+  include CarrierWave::MiniMagick
 
-   process resize_to_limit: [600, 700]
+  process resize_to_limit: [600, 700]
   # Process files as they are uploaded:
   # process scale: [200, 300]
   #
