@@ -1,24 +1,15 @@
-# README
+# クリニック申し送りアプリ
+<img width="1245" alt="Screen Shot 2023-03-15 at 14 02 09" src="https://user-images.githubusercontent.com/86922727/225539286-a86b074f-34a8-4a6d-9950-78deb782fb08.png">
+クリニックや病院での利用者、業務の申し送りをサポートするアプリです。  
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## URL  
+https://peaceful-shore-53282.herokuapp.com  
+ログインページからログイン可能です。  
 
-Things you may want to cover:
+## 作成背景  
+前職では整形外科クリニックにて作業療法士として勤務していました。
+医療従事者として働く中で、現場内での「申し送り・情報共有」は患者の予後に多大な影響を与えかねません。
+部署が多い医療現場の中で、私が勤務していたクリニックは情報が紙媒体での共有状態でした。その中で情報共有不足によるミスが起こるたびに、何度も情報共有の在り方を考えさせられました。このアプリではそんな申し送り・情報共有不足による医療ミスを防ぐために、デバイスでの申し送りアプリを考案し、様々な機能を追加しました。  
 
-* Ruby version
+〜どの様なアプリにしていくか考える〜
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
