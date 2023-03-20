@@ -5,14 +5,14 @@
     <tr>
       <th scope="col">投稿時間</th>
       <th scope="col">投稿者</th>
-      <th scope="col>">投稿内容</th>
+      <th scope="col>">タイトル</th>
       <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
     <% @outpatient.each.with_index(1) do |post, i| %>
       <tr>
-        <th><%= post.created_at %></th>
+        <th><%= post.created_at.strftime("%Y-%m-%d %H:%M") %></th>
         <td><%= post.category %></td>
         <td><%= post.title %></td>
         <td>
