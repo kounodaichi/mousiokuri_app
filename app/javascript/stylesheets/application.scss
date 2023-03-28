@@ -642,6 +642,19 @@ a.btn-radius-solid:hover {
   margin-bottom: 50px;
 }
 
+.flex7{
+  display: flex;
+}
+.flex7 .image {
+  width: 600px;
+ 	height: 400px;
+ 	overflow: hidden;
+	border-radius: 10%;
+  margin-right: 50px;
+  margin-left: 200px;
+  margin-bottom: 50px;
+}
+
 .balloon1{
   display: inline-block;
   margin-top: 100px;
