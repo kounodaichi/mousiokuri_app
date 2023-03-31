@@ -16,6 +16,7 @@ class PostsController < ApplicationController
     @comment = current_user.comments.new
   end
 
+
   def new
     @post = Post.new
   end
@@ -52,7 +53,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy!
-    redirect_to root_path
+    redirect_to posts_path
   end
 
   def daycare
