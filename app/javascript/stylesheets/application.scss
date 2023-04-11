@@ -26,7 +26,7 @@ body {
     box-shadow: none;
     background-color: #a9abcf;
     position: fixed;
-    height: 70px!important;
+    height: 100px!important;
     overflow: hidden;
     z-index: 10;
 }
@@ -412,10 +412,14 @@ body{
 
 @import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap');
 .header-name{
+  margin-top: 10px;
   font-family: 'Yuji Syuku', serif;
   color: rgb(255, 255, 255);
 }
 
+.side-text{
+  margin-right: 100px;
+}
 #sheet{
   background-image:url("https://www.beiz.jp/images_P/leather/leather_00386.jpg");
   background-size: 1300px 800px ;
@@ -848,4 +852,9 @@ a.btn-radius-solid:hover {
   color: rgb(68, 68, 68);
   border-radius: 100vh;
   background-image: linear-gradient(to left, #4b96c9 0%, #4b96c9 100%);
+}
+
+.form{
+ margin: auto;
+ max-width: 400px;
 }

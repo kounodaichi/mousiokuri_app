@@ -3,14 +3,16 @@
     <h2 style="text-align:center">◯◯クリニック　利用者申し送り</h2>
   </div>
 <h6 style="text-align:right">
-  <% if user_signed_in? %>
-    <%= link_to "アカウント編集", edit_user_registration_path %>
-    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" } %>
-    <%= "【ログイン中のアドレス】#{current_user.email}" %>
-  <% else %>
-    <%= link_to "新規登録", new_user_registration_path %>
-    <%= link_to "ログイン", new_user_session_path %>
-  <% end %>
+　<div class= "side-text">
+    <% if user_signed_in? %>
+      <%= link_to "アカウント編集", edit_user_registration_path %>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" } %>
+      <%= "【ログイン中のアドレス】#{current_user.email}" %>
+    <% else %>
+      <%= link_to "新規登録", new_user_registration_path %>
+      <%= link_to "ログイン", new_user_session_path %>
+    <% end %>
+  </div>
 </h6>
 <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
 <label for="openSidebarMenu" class="sidebarIconToggle">
