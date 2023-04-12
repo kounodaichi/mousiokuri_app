@@ -24,7 +24,7 @@ body {
     width: 100%;
     max-width: 100%;
     box-shadow: none;
-    background-color: #a9abcf;
+    background-color: #76a370;
     position: fixed;
     height: 100px!important;
     overflow: hidden;
@@ -57,7 +57,7 @@ body {
     
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
-    background: linear-gradient(180deg, #8989aa 0%, #e6e6e6 100%);
+    background: linear-gradient(180deg, #76a370 0%, #e6e6e6 100%);
 }
 .sidebarMenuInner{
     margin:0;
@@ -106,6 +106,7 @@ input[type=checkbox] {
     left: 15px;
     height: 22px;
     width: 22px;
+    margin-top: 15px;
 }
 .spinner {
     transition: all 0.3s;
@@ -113,7 +114,9 @@ input[type=checkbox] {
     position: absolute;
     height: 3px;
     width: 100%;
-    background-color: #fff;
+    margin-left: 10px;
+    
+    background-color: rgb(255, 255, 255);
 }
 .horizontal {
     transition: all 0.3s;
@@ -156,12 +159,12 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 .sample_h_17{
   font-size: 1.5em;/* フォントサイズ */
   font-weight: bold;/* フォント太さ */
-  padding-top: 450px;
+  padding-top: 80px;
   padding-bottom: 3px;
   margin-bottom: 50px;
   position: relative;
   color: #405853;/* フォント色 */
-}
+  }
   
   .sample_h_17:before {
   position: absolute;
@@ -169,53 +172,149 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   display: block;
   width: 100%;
   height: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   background: repeating-linear-gradient(90deg, #3EAF36 0%, #369fad 20%, rgb(171, 97, 80) 50%, rgb(160, 173, 54) 100%);
   bottom: 0;
   left: 0;
   z-index: 0;
-}
+  }
 
 
-  
-  
-
-
-
-.arrow_box{
-  position:relative;
-  left:40px;
-  width:500px;
-  height:80px;
+.btn1 {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  padding: 10px 30px;
+  padding-top: 75px;
+  padding-bottom: 10px;
+  background: url("https://p4.wallpaperbetter.com/wallpaper/657/137/89/work-finance-documents-office-wallpaper-preview.jpg") ;
+  display: block;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  border-radius: 7px;
   margin-bottom: 10px;
-  background:#1BC0FF;
-  padding:10px;
-  text-align:center;
-  color:#FFFFFF;
-  font-size:20px;
-  font-weight:bold;
-  border-radius:10px;
-  -webkit-border-radius:10px;
-  -moz-border-radius:10px;
+  margin-right: 50px;
+  margin-left: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  }
+.btn2 {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  padding: 10px 30px;
+  padding-top: 75px;
+  padding-bottom: 10px;
+  background: url("https://i2.wp.com/www.yujakudo.com/blogs/wp-content/uploads/sites/2/2013/09/image0011.png?resize=624%2C350") ;
+  display: block;
+  text-decoration: none;
+  color: rgb(2, 2, 2);
+  border-radius: 7px;
+  margin-bottom: 10px;
+  margin-right: 50px;
+  margin-left: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  }
+
+.btn3 {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  padding: 10px 30px;
+  padding-top: 75px;
+  padding-bottom: 10px;
+  background: url("https://free-materials.com/adm/wp-content/uploads/2017/03/d911b9d57c84cf3b3926230cce23aeb8-750x499.jpg") ;
+  display: block;
+  text-decoration: none;
+  color: rgb(3, 3, 3);
+  border-radius: 7px;
+  margin-bottom: 10px;
+  margin-right: 50px;
+  margin-left: 50px;
+  font-size: 20px;
+  font-weight: bold;
 }
-.arrow_box:after{
-  border: solid transparent;
-  content:'';
-  height:0;
-  width:0;
-  pointer-events:none;
-  position:absolute;
-  border-color: rgba(27, 192, 255, 0);
-  border-top-width:10px;
-  border-bottom-width:10px;
-  border-left-width:30px;
-  border-right-width:30px;
-  margin-top: -10px;
-  border-right-color:#1BC0FF;
-  right:100%;
-  top:30%;
+.all-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.feature-1 {
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  padding: 10px 30px;
+  padding-top: 155px;
+  padding-bottom: 10px;
+  background: url("https://t4.ftcdn.net/jpg/00/79/06/61/360_F_79066185_0NO2RPc61jjggXl3EoiZLFh629DfFPw5.jpg") ;
+  display: block;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  border-radius: 7px;
+  margin-bottom: 10px;
+  margin-right: 50px;
+  margin-left: 50px;
+  font-size: 40px;
+  font-weight: bold;
+  }
+
+.feature-1-all{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-2 {
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  padding: 10px 30px;
+  padding-top: 155px;
+  padding-bottom: 10px;
+  background: url("https://img.freepik.com/free-photo/medical-technology-icon-set-for-health-and-wellness_53876-104940.jpg?size=626&ext=jpg&ga=GA1.1.969028298.1668040540&semt=sph") ;
+  display: block;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  border-radius: 7px;
+  margin-bottom: 10px;
+  margin-right: 50px;
+  margin-left: 50px;
+  font-size: 40px;
+  font-weight: bold;
+  }
+
+.feature-2-all{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-3 {
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  padding: 10px 30px;
+  padding-top: 155px;
+  padding-bottom: 10px;
+  background: url("https://static.super.website/fs/super-website/userFiles/smartbg/images/r3-homepage-background-15827346611587.jpg?v=1644315848") ;
+  display: block;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  border-radius: 7px;
+  margin-bottom: 10px;
+  margin-right: 50px;
+  margin-left: 50px;
+  font-size: 40px;
+  font-weight: bold;
+  }
+
+.feature-3-all{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .balloon-set-box {
   display: flex;
   flex-wrap: wrap;
@@ -393,8 +492,8 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 
 body{
-  background-image:url("https://st.depositphotos.com/1028979/4096/i/600/depositphotos_40960757-stock-photo-doctor-hand-with-modern-computer.jpg");
-  background-size: 1300px 800px ;
+  background-image:url("https://pics.prcm.jp/499bc7b07d392/85759159/jpeg/85759159.jpeg");
+  background-size:cover;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap');
@@ -421,7 +520,7 @@ body{
   margin-right: 100px;
 }
 #sheet{
-  background-image:url("https://www.beiz.jp/images_P/leather/leather_00386.jpg");
+  background-image:url("https://img.freepik.com/free-vector/abstract-medical-wallpaper-template-design_53876-61805.jpg?w=1480&t=st=1681227080~exp=1681227680~hmac=4d71a5679d976cee83837d30278c714abab37af4a6facceb2342db57960a4585");
   background-size: 1300px 800px ;
 }
 
@@ -545,12 +644,7 @@ body{
   padding: 1rem 3rem;
   margin-left: -40px;
 }
-.first {
-  padding: 0.5em;/*文字周りの余白*/
-  color: #010101;/*文字色*/
-  background: #bdc9da;/*背景色*/
-  border-bottom: solid 3px #516ab6;/*下線*/
-}
+
 
 a.btn-radius-solid {
   background: #f1e767;
@@ -565,99 +659,7 @@ a.btn-radius-solid:hover {
   background: linear-gradient(to top, #53eb2d 0%, #757575 100%);
 }
 
-.flex1{
-  display: flex;
-}
-.flex1 .image{
-  width: 600px;
-  height: 270px;
-  overflow: hidden;
- border-radius: 10%;
- margin-right: 100px;
- margin-left: 200px;
- margin-top: 50px;
- margin-bottom: 50px;
-}
 
-
-.flex2{
-  display: flex;
-  margin-bottom: 50px;
-}
-.flex2 .image {
-  width: 350px;
-  height: 110px;
-  overflow: hidden;
- border-radius: 10%;
- margin-right: 50px;
- margin-left: 200px;
- margin-bottom: 50px;
-}
-
-.flex3{
-  display: flex;
-}
-.flex3 .image {
-  width: 580px;
-  height: 200px;
-  overflow: hidden;
- border-radius: 20%;
- margin-right: 110px;
- margin-left: 200px;
- margin-bottom: 50px;
-}
-
-.flex4{
-  display: flex;
-}
-.flex4 .image {
-  width: 150px;
-  height: 170px;
-  overflow: hidden;
- border-radius: 10%;
- margin-right: 50px;
- margin-left: 200px;
- margin-bottom: 50px;
-}
-
-.flex5{
-  display: flex;
-}
-.flex5 .image {
-  width: 800px;
- 	height: 400px;
- 	overflow: hidden;
-	border-radius: 10%;
-  margin-right: 0px;
-  margin-left: 200px;
-  margin-bottom: 50px;
-}
-
-.flex6{
-  display: flex;
-}
-.flex6 .image {
-  width: 600px;
- 	height: 600px;
- 	overflow: hidden;
-	border-radius: 10%;
-  margin-right: 50px;
-  margin-left: 200px;
-  margin-bottom: 50px;
-}
-
-.flex7{
-  display: flex;
-}
-.flex7 .image {
-  width: 600px;
- 	height: 400px;
- 	overflow: hidden;
-	border-radius: 10%;
-  margin-right: 50px;
-  margin-left: 200px;
-  margin-bottom: 50px;
-}
 
 .balloon1{
   display: inline-block;
