@@ -1,5 +1,6 @@
 # クリニック申し送りアプリ
-<img width="1245" alt="Screen Shot 2023-03-15 at 14 02 09" src="https://user-images.githubusercontent.com/86922727/225539286-a86b074f-34a8-4a6d-9950-78deb782fb08.png">
+![022FB709-CBB9-4F0B-80F8-2C4A2C8E037E_4_5005_c](https://user-images.githubusercontent.com/86922727/231659675-b6a2ee02-71a2-4032-b67d-34b7d89c3d34.jpeg)
+
 クリニックや病院での利用者、業務の申し送りをサポートするアプリです。  
 
 ## URL  
@@ -29,8 +30,9 @@ https://peaceful-shore-53282.herokuapp.com
  * fontawesomeのアイコンを使用しアプリの機能を分かりやすく表示
 
 ## ①トップページ
-* 当アプリの作成経緯、機能的なポイントや使用方法、アプリを使用していただいた方々のフィードバックについて記載しています。  
-![trim B66EA022-E7EB-4E4F-88D0-D1D225F0886C](https://user-images.githubusercontent.com/86922727/228766996-0056908b-2e55-4b34-a3a5-1107ad8adaac.gif)
+* 機能的なポイントや使用方法、アプリを使用していただいた方々のフィードバックについて記載しています。  
+![trim 38651473-EA6F-4052-AA84-62DA2C689EC9](https://user-images.githubusercontent.com/86922727/231660162-5c0ae619-997b-4db5-96ed-fdcd67e05309.gif)
+
 
 
 ## ②投稿一覧
@@ -39,12 +41,14 @@ https://peaceful-shore-53282.herokuapp.com
   * 申し送りが何時投稿されたのか、宛先はどこの部署なのかを一目で把握することが出来ます。（投稿者のメールアドレスはログイン時に設定したものを自動的に反映しています）
   * 一覧には申し送りのタイトルが表示されており、内容を見る場合は詳細ボタンをクリックします。
   * 申し送りを閲覧したら閲覧☆ボタンをクリック。これで閲覧したか否かが把握出来流ようになります。
-![trim AE86E9A6-33C6-467A-9DF0-600DF04C9C1B](https://user-images.githubusercontent.com/86922727/228772344-adf57e8a-4184-41f4-a92e-4cfa4f368f05.gif)
+![trim 8C9EADBF-1DE6-4C8E-A572-395BFF93752A](https://user-images.githubusercontent.com/86922727/231660968-dbb40720-5aa0-453a-8f4e-d612e407731a.gif)
+
 
 ## ③申し送り入力フォーム
  * 宛先の部署を選択できます。これでどこの部署に宛てた申し送りなのかを把握出来ます。
  * 画像投稿が可能です。MRIやCT画像等を共有することが可能です。  
-![trim 23A77B6D-F44C-4381-8CB5-D1B47783FC57](https://user-images.githubusercontent.com/86922727/228773595-eeb9dbbe-6458-4fd1-990a-21029f66210f.gif)
+![trim D1690890-654D-480E-ACC5-CBDC67000072](https://user-images.githubusercontent.com/86922727/231662643-99548644-3188-445f-84b9-a10142d68d76.gif)
+
 
 ## ④投稿詳細
  * 投稿一覧の詳細ボタンから見ることが出来ます。
@@ -54,21 +58,23 @@ https://peaceful-shore-53282.herokuapp.com
 ## ⑤部署分け投稿
  * サイドメニューバーの各部署から、その部署へ宛てた申し送りを見ることが出来ます。
  * 自身の部署のみの申し送りを閲覧したい場合などに便利です。  
-![trim E5AE43C8-C8C8-4921-A1A4-6885A7D2F4D4](https://user-images.githubusercontent.com/86922727/229262576-ad229b29-c57e-49f4-a21f-859a789cdad0.gif)
+![trim D4D72CFA-80CD-4F83-8A80-75BD10E40315](https://user-images.githubusercontent.com/86922727/231663027-f2beb954-df46-4f7b-86e8-c2a1dbb90882.gif)
+
 
 
 ## ⑥タスク管理
 * 申し送りから派生した業務等をやることリストに追加できます。
  * 期限を設定でき、計画的に業務を進めることが出来ます。
  * タスクが完了したら「タスク完了ボタン」を押します。（タスク完了ボタンは投稿者のみ押すことが可能）  
-![trim 34BB290E-6BFD-4551-8190-DA7E27BA1330](https://user-images.githubusercontent.com/86922727/229262585-57c8b12c-c7d9-4820-ae7e-088482139d4a.gif)
+![trim 3D8C5EBA-0AEA-486B-9784-A96D3E05B8C5](https://user-images.githubusercontent.com/86922727/231665755-025b26b8-6969-4e4b-9e29-01aac4f25273.gif)
+
 
 
 
 ## ⑦スケジュール管理
 * 申し送りやタスクの予定をスケジューリングすることが可能です。
 * タイトル、内容をそれぞれ入力し投稿すると、カレンダーに反映されます。  
-![trim 144CB3AC-E5D7-4101-BEE2-EA3D9788D902](https://user-images.githubusercontent.com/86922727/229262607-937952cc-0830-4d60-b7cb-f1123047a093.gif)
+![trim 66F990C2-07E9-4CC5-9CB4-8F7948265436](https://user-images.githubusercontent.com/86922727/231666284-5503e8a0-d1ab-46d9-b697-560ba9c817f7.gif)
 
 
 ## 使用技術
@@ -92,7 +98,7 @@ https://peaceful-shore-53282.herokuapp.com
   * メッセージ機能
 * タスク管理
   * 新規投稿
- * 期間設定
+  * 期間設定
   * タスク完了ボタン
 * 部署分け投稿閲覧
   * 投稿のカテゴリー分け
